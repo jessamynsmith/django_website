@@ -25,8 +25,3 @@ url(r'^wnba_teams/$', core_views.wnba_teams, name='wnba_teams'),
 url(r'^wnba_cheat_sheet/$', core_views.wnba_cheat_sheet, name='wnba_cheat_sheet'),
 url(r'^contact/',    include('envelope.urls')),
 ]
-
-if not settings.DEBUG:
-    urlpatterns += patterns('',
-        (r'^static/(?P<path>.*)$', 'django.views.static.serve', {'document_root': settings.STATIC_ROOT}),
-    )
