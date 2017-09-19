@@ -1,0 +1,25 @@
+{% extends 'base.html' %}
+
+{% block title %}
+Contact Us
+{% endblock %}
+
+{% block content %}
+
+  <div class="jumbotron jumbotron-sm">
+    <div class="container">
+        <div class="row">
+            <div class="col-sm-12 col-lg-12">
+                <h1 class="h1">
+                    Contact us <small>We would love to hear what you think!</small></h1>
+                </div>
+            </div>
+        </div>
+    </div>
+
+{% load envelope_tags %}
+
+{% render_contact_form %}
+
+{% endblock %}
+

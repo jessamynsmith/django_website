@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="description" content="Wanna Sportfort?">
+  <!-- Bootstrap CSS -->
+  {% load static %}
+  <link rel="stylesheet" type="text/css" href="{% static 'core/bootstrap.min.css' %}">
+  <!--
+  <link rel="stylesheet" type="text/css" href="{% static 'core/styles.css' %}">
+
+  -->
+  <link rel="icon"  type="image/png" href="{% static 'core/Castle_Favicon.jpg' %}">
+
+
+ <!-- <title>Sport Fort</title> -->
+  <title>{% block title %}Sport Fort{% endblock %}</title>
+</head>
+<body>
+<!--  {% block scripts %} 
+  <script src="{% static 'core/bootstrap.js' %}"></script>
+  <script src="{% static 'core/bootstrap.min.js' %}"></script>
+  {% endblock %} -->
+
+  <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.11.0/umd/popper.min.js" integrity="sha384-b/U6ypiBEHpOf/4+1nzFpr53nxSS+GLCkfwBdFNTxtclqqenISfwAzpKaMNFNmj4" crossorigin="anonymous"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta/js/bootstrap.min.js" integrity="sha384-h0AbiXch4ZDo7tp9hKZ4TsHbi047NrKGLO3SEJAg45jXxnGIfYzk4Si90RDIqNm1" crossorigin="anonymous"></script>
+
+
+
+
+  <header>
+    {% if user.is_authenticated %}
+    <nav class="navbar navbar-toggleable-md navbar-light">
+      <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <a class="navbar-brand" href="/">
+        <img src="{% static 'core/logo_size_2.jpg' %}" width="82" alt="Sport Fort"/>
+      </a>
+      <link rel="stylesheet" type="text/css" href="{% static 'core/styles.css' %}">
+
+      <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav mr-auto">
+        </li>
+        <li class="dropdown">
+          <a href="#" class="dropdown-toggle nav-link" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">WNBA<span class="caret"></span></a>
+          <ul class="dropdown-menu">
+            <li><a href="/wnba_directory/">WNBA Directory</a></li>
+            <li><a href="/wnba_fd/">Fanduel</a></li>
+            <li><a href="/wnba_dk/">Draftkings</a></li>
+            <li><a href="/wnba_teams/">Team Stats</a></li>
+            <li><a href="/wnba_cheat_sheet/">Cheat Sheet</a></li>
+          </ul>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="/contact/">Contact Us</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="/articles/">Articles</a>
+        </li><li class="nav-item">
+        <a class="nav-link" href="/testimonials/">Testimonials</a>
+
+        <li class="nav-item">
+          <a class="nav-link" href="{% url 'logout' %}">Logout</a>
+
+        </li>
+
+
+
+      </ul>
+        <!-- <form class="form-inline my-2 my-lg-0">
+        <input class="form-control mr-sm-2" type="text" placeholder="Search">
+        <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
+      </form> -->
+    </div>
+  </div>
+</nav>
+
+
+
+{% else %}    <nav class="navbar navbar-toggleable-md navbar-light">
+      <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <a class="navbar-brand" href="/">
+        <img src="{% static 'core/logo_size_2.jpg' %}" width="82" alt="Sport Fort"/>
+      </a>
+      <link rel="stylesheet" type="text/css" href="{% static 'core/styles.css' %}">
+
+      <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav mr-auto">
+        </li>
+        <li class="dropdown">
+          <a href="#" class="dropdown-toggle nav-link" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">WNBA<span class="caret"></span></a>
+          <ul class="dropdown-menu">
+            <li><a href="/wnba_directory/">WNBA Directory</a></li>
+            <li><a href="/wnba_fd/">Fanduel</a></li>
+            <li><a href="/wnba_dk/">Draftkings</a></li>
+            <li><a href="/wnba_teams/">Team Stats</a></li>
+            <li><a href="/wnba_cheat_sheet/">Cheat Sheet</a></li>
+          </ul>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="/contact/">Contact Us</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="/articles/">Articles</a>
+        </li><li class="nav-item">
+        <a class="nav-link" href="/testimonials/">Testimonials</a>
+
+        <li class="nav-item">
+          <a class="nav-link" href="{% url 'login' %}">Login</a>
+
+        </li>
+
+        <li class="nav-item">
+          <a class="nav-link" href="{% url 'signup' %}">Sign Up</a>
+
+        </li>
+
+
+
+      </ul>
+        <!-- <form class="form-inline my-2 my-lg-0">
+        <input class="form-control mr-sm-2" type="text" placeholder="Search">
+        <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
+      </form> -->
+    </div>
+  </div>
+</nav>
+
+{% endif %}
+
+</header>
+<main>
+  {% block content %}
+  {% endblock %}
+</main>
+<footer class="footer-distributed">
+
+  <div class="footer-left">
+
+    <h3>Sport<span>Fort</span></h3>
+
+    <p class="footer-links">
+      <a href="/">Home</a>
+      ·
+      <a href="/wnba_directory/">WNBA</a>
+      ·
+      <a href="/contact/">Contact Us</a>
+      ·
+      <a href="/testimonials/">Testomonials</a>
+    </p>
+
+      <!--  <p class="footer-company-name">Sport Fort</p> 
+
+        <div class="footer-icons">
+
+          <a href="#"><i class="fa fa-facebook"></i></a>
+          <a href="#"><i class="fa fa-twitter"></i></a>
+          <a href="#"><i class="fa fa-linkedin"></i></a>
+          <a href="#"><i class="fa fa-github"></i></a>
+
+        </div>
+      -->
+
+    </div>
+<!-- 
+      <div class="footer-right">
+
+       <p>Contact Us</p>
+
+        <form action="#" method="post">
+
+          <input type="email" name="email" placeholder="Email" />
+          <textarea name="message" placeholder="Message"></textarea>
+          <button>Send</button>
+
+        </form>
+
+      </div>
+    -->
+  </footer>
+</body>
+</html>

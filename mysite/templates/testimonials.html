@@ -1,0 +1,44 @@
+{% extends 'base.html' %}
+
+{% block title %}
+Testimonial
+{% endblock %}
+
+{% block content %}
+{% load static %}
+
+<div class="container bootstrap snippet">
+    <div class="row">
+        <h2 class="text-center text-primary">What our clients said about us?</h2>
+        <hr>
+    	<div class="col-md-10 col-md-offset-1">
+			<div class="row testimonials">
+				<div class="col-sm-8">
+					<blockquote>
+						<p class="clients-words"> The Projections helped me win big!</p>
+						<span class="clients-name text-primary">— Elliot Stern (creator)</span>
+						<img class="img-circle img-thumbnail" src="{% static 'core/testimonial1.PNG' %}">
+					</blockquote>
+				</div>
+				<div class="col-sm-8">
+					<blockquote>
+						<p class="clients-words"> Wow. It wins!! </p>
+						<span class="clients-name text-primary">—Neil Suji </span>
+						<img class="img-circle", height="500" src="{% static 'core/wnba_lineup_08_25_17.PNG' %}">
+					</blockquote>
+				</div>
+			<!--	<div class="col-sm-4">
+					<blockquote>
+						<p  class="clients-words">copy paste my snippets for other users very easy</p>
+						<span class="clients-name text-primary">— Big daniel mont</span>
+						<img class="img-circle img-thumbnail" src="http://lorempixel.com/400/400/people/6/">
+					</blockquote>
+				</div>  -->
+			</div><!--/.row-->
+		</div><!--/.col-->	
+	</div><!--/.row-->
+</div>
+
+
+
+{% endblock %}

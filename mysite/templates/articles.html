@@ -1,0 +1,58 @@
+{% extends 'base.html' %}
+
+{% block title %}
+Articles
+{% endblock %}
+
+{% block content %}
+{% load static %}
+
+  <div class="container">
+    <div class="row">
+      <div class="col-md-4">
+       <div class="single-blog-item">
+        <div class="blog-thumnail">
+          <a><img src="{% static 'core/Mozgov_Effect_box_whisker.png' %}" alt="blog-img" width="300"></a>
+        </div>
+        <div class="blog-content">
+          <h4>Small Ball. A Myth Started By a Team that Doesn’t Even do it</p>
+            <a href="/small_ball/" class="more-btn">View More</a>
+          </div>
+          <span class="blog-date">May 19, 2017</span>
+        </div>
+      </div>
+
+    <!--    <div class="col-md-4">
+           <div class="single-blog-item">
+                <div class="blog-thumnail">
+                    <a href=""><img src="http://via.placeholder.com/370x275" alt="blog-img"></a>
+                </div>
+                <div class="blog-content">
+                    <h4><a href="#">Lorem ipsum dolor sit amet</a></h4>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sint expedita exercitationem nostrum, eligendi quis, esse quos atque in molestias animi.</p>
+                    <a href="" class="more-btn">View More</a>
+                </div>
+                <span class="blog-date">June 03, 2015</span>
+            </div>
+         </div>
+         
+        <div class="col-md-4">
+           <div class="single-blog-item">
+                <div class="blog-thumnail">
+                    <a href=""><img src="http://via.placeholder.com/370x275" alt="blog-img"></a>
+                </div>
+                <div class="blog-content">
+                    <h4><a href="#">Lorem ipsum dolor sit amet</a></h4>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sint expedita exercitationem nostrum, eligendi quis, esse quos atque in molestias animi.</p>
+                    <a href="" class="more-btn">View More</a>
+                </div>
+                <span class="blog-date">July 03, 2015</span>
+            </div>
+         </div>
+       -->
+
+     </div>
+   </div>
+
+
+     {% endblock %}
